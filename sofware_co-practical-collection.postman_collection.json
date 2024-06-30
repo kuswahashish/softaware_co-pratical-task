@@ -1,0 +1,395 @@
+{
+	"info": {
+		"_postman_id": "077c4470-d1c4-4fbe-a0d0-670959572479",
+		"name": "sofware_co-practical-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36636851"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "add role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_name\":\"new role\",\r\n    \"modules\":[\"abc\",\"xyz\",\"pqr\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/role/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"role",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get role list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/role/?search=&page=2&pageSize=1&sortBy=createdAt&sortOrder=DESC",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"role",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sortOrder",
+									"value": "DESC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get role by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/role/668023771b85d0777752d8fb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"role",
+								"668023771b85d0777752d8fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_name\":\"xyz 1\",\r\n    \"remove_modules\":[\"XYZA\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/role/668023821b85d0777752d8fe",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"role",
+								"668023821b85d0777752d8fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete role",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/role/668023771b85d0777752d8fb",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"role",
+								"668023771b85d0777752d8fb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"test 3\",\r\n    \"last_name\":\"test 3\",\r\n    \"email\":\"test3@gmail.com\",\r\n    \"country_code\":\"+91\",\r\n    \"phone\":\"1231231231\",\r\n    \"role_id\":\"668023821b85d0777752d8fe\",\r\n    \"password\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/?search=a&page=1&pageSize=10&sortBy=createdAt&sortOrder=ASC",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "a"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sortOrder",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/6680f5e90bb3980a940f4b55",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"6680f5e90bb3980a940f4b55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"updated name\",\r\n    \"email\":\"test3@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/6680f5e90bb3980a940f4b55",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"6680f5e90bb3980a940f4b55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update bulk user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"all_user\":false,\r\n    \"users_data\":[{\r\n        \"id\":\"6680f6150bb3980a940f4b5b\",\r\n        \"last_name\":\"seprate name update in bulk\"\r\n    },\r\n    {\r\n        \"id\":\"6680f5e90bb3980a940f4b55\",\r\n        \"email\":\"emailupdatedinbulk@gmail.com\"\r\n    }]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/bulk-update",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"bulk-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/6680f8eddeea8bfdd91ddb1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"6680f8eddeea8bfdd91ddb1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test3@gmail.com\",\r\n    \"password\":\"Test@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/sign-in",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check access module",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjgxNGQyYjgzMWQyNTE3MDBjYTdiNTQiLCJlbWFpbCI6InRlc3QzQGdtYWlsLmNvbSIsImZpcnN0X25hbWUiOiJ0ZXN0IDMiLCJsYXN0X25hbWUiOiJ0ZXN0IDMiLCJpYXQiOjE3MTk3NDk5NDQsImV4cCI6MTcyMjM0MTk0NH0.tlGUp6xg1HEzcVm2bP_DeIqfoCvVe-hAwkynfgEwsog",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/check-access-module/66814d2b831d251700ca7b54?module=abcd",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"check-access-module",
+								"66814d2b831d251700ca7b54"
+							],
+							"query": [
+								{
+									"key": "module",
+									"value": "abcd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

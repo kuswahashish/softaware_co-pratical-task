@@ -12,7 +12,6 @@ The project structure includes the following components:
 - `services/`: Contains business logic and database interaction logic.
 - `validation/`: Contains validation for the api request.
 - `utils/`: Contains utility functions, such as common response & middlewares.
-- `swagger/`: Contains swagger files for api documentation.
 
 ## Tasks Implemented
 
@@ -28,7 +27,7 @@ The project structure includes the following components:
 
 ### 2. User List API
 
-- API endpoint to list users.
+- In this API listed users along with search and pagination.
 - Populates roleName and access modules from the Role module for each user.
 
 ### 3. Login and Signup APIs
@@ -38,24 +37,19 @@ The project structure includes the following components:
 
 ### 4. Update List of Access Modules
 
-- API endpoint to add unique access modules to a role.
-- API endpoint to remove access modules from a role.
+- Managed to handle this task along with update role endpoint to add unique access modules to a role or to remove access modules from a role.
 
 ### 5. Check User Access to Modules
 
-- API endpoint to check whether a user has access to a specific module based on their role.
+- In this API for checking if user has access to a specific module based on their role.
 
-### 6. Update Many Users with Same Data
+### 6. Update Many Users with Same Data & Update Many Users with Different Data
 
-- API endpoint to update multiple users with the same data (e.g., update all users' last names to "ABC").
-
-### 7. Update Many Users with Different Data
-
-- API endpoint to update multiple users with different data in a single database call (e.g., update one user's firstName, another's access modules, and email).
+- This task i have done in single api with the help of flag named "all_user" where i use to update all the users data with same value and for different data i am accepting array of object to update the different user with different data.
 
 ### Additional Notes
 
-- **Search Functionality:** Implemented search functionality in list APIs to filter results based on user input (e.g., searching for usernames).
+- **Search Functionality:** Implemented search functionality as well pagination in list APIs of role and user.
 
 ## Getting Started
 

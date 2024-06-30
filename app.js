@@ -2,14 +2,8 @@ const express = require('express');
 const connectDB = require('./config/db.connection');
 const roleRoutes = require('./src/routes/role.routes');
 const userRoutes = require('./src/routes/user.routes');
-
 const app = express();
-// swagger-ui-express configurations
-const swagger = require("swagger-ui-express");
-const swaggerDoc = require("./swagger/swagger.index");
-swaggerDoc.host = process.env.SWAGGER_BASE_URL;
-app.use("/swagger-doc", swagger.serve);
-app.use("/swagger-doc", swagger.setup(swaggerDoc));
+const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 connectDB();
@@ -28,4 +22,6 @@ app.use((err, req, res, next) => {
   res.status(500).send('Internal Server Error!');
 });
 
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

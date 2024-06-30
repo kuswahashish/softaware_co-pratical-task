@@ -12,5 +12,5 @@ router.get('/:userId', getUserById);
 router.put('/:userId', updateUser);
 router.delete('/:userId', deleteUser);
 router.put('/bulk-update', updateBulkUsers);
-router.get('/check-access-module/:userId', authenticate, checkUserAccessModule);
+router.get('/check-access-module/:userId', checkUserAccessModule);
 module.exports = router;
